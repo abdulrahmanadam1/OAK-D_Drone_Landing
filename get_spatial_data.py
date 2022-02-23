@@ -43,6 +43,10 @@ monoRight.setBoardSocket(dai.CameraBoardSocket.RIGHT)
 # Setting node configs
 stereo.setDefaultProfilePreset(dai.node.StereoDepth.PresetMode.HIGH_DENSITY)
 
+stereo.setExtendedDisparity(False)
+stereo.setLeftRightCheck(True)
+stereo.setSubpixel(True)
+
 spatialDetectionNetwork.setBlobPath(blobconverter.from_zoo(name='mobilenet-ssd', shaves=6))
 spatialDetectionNetwork.setConfidenceThreshold(0.5)
 spatialDetectionNetwork.input.setBlocking(False)
